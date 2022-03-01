@@ -11,6 +11,7 @@ function Section() {
         <LeftButton>Custom Order</LeftButton>
         <RightButton>Exiting Inventory</RightButton>
       </ButtonGroup>
+      <DownArrow src="/images/down-arrow.svg" alt="" />
     </Wrap>
   );
 }
@@ -52,3 +53,8 @@ const LeftButton = styled.div`
   cursor: pointer;
 `;
 const RightButton = styled(LeftButton)``;
+
+const DownArrow = styled.img`
+  margin-top: 20px;
+  height: 40px;
+`;

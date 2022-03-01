@@ -1,16 +1,22 @@
 import styled from "styled-components";
 
-function Section() {
+function Section({
+  title,
+  description,
+  leftBtnText,
+  rightBtnText,
+  backgroundImg,
+}) {
   return (
-    <Wrap>
+    <Wrap bgImage={backgroundImg}>
       <ItemText>
-        <h1>Model-S</h1>
-        <p>Order Online For Touchless Delivery</p>
+        <h1>{title}</h1>
+        <p>{description}</p>
       </ItemText>
       <Buttons>
         <ButtonGroup>
-          <LeftButton>Custom Order</LeftButton>
-          <RightButton>Exiting Inventory</RightButton>
+          <LeftButton>{leftBtnText}</LeftButton>
+          <RightButton>{rightBtnText}</RightButton>
         </ButtonGroup>
         <DownArrow src="/images/down-arrow.svg" alt="" />
       </Buttons>
@@ -23,7 +29,7 @@ export default Section;
 const Wrap = styled.div`
   height: 100vh;
   width: 100vw;
-  background-image: url("/images/model-s.jpg");
+  background-image: ${(props) => `url("/images/${props.bgImage}")`};
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -59,15 +65,15 @@ const LeftButton = styled.div`
   margin: 8px;
 `;
 const RightButton = styled(LeftButton)`
-background-color:white;
-opacity: 0.65;
-color: black;
+  background-color: white;
+  opacity: 0.65;
+  color: black;
 `;
 
 const DownArrow = styled.img`
   height: 40px;
-  overflow-x:hidden;
+  overflow-x: hidden;
   animation: animateDown infinite 1.5s;
 `;
 
-const Buttons = styled.div``
+const Buttons = styled.div``;

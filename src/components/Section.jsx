@@ -1,11 +1,7 @@
 import styled from "styled-components";
 
 function Section({
-  title,
-  description,
-  leftBtnText,
-  rightBtnText,
-  backgroundImg,
+  details: { title, description, leftBtnText, rightBtnText, backgroundImg },
 }) {
   return (
     <Wrap bgImage={backgroundImg}>
@@ -16,7 +12,7 @@ function Section({
       <Buttons>
         <ButtonGroup>
           <LeftButton>{leftBtnText}</LeftButton>
-          <RightButton>{rightBtnText}</RightButton>
+          {rightBtnText && <RightButton>{rightBtnText}</RightButton>}
         </ButtonGroup>
         <DownArrow src="/images/down-arrow.svg" alt="" />
       </Buttons>

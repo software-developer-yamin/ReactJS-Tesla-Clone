@@ -7,11 +7,13 @@ function Section() {
         <h1>Model-S</h1>
         <p>Order Online For Touchless Delivery</p>
       </ItemText>
-      <ButtonGroup>
-        <LeftButton>Custom Order</LeftButton>
-        <RightButton>Exiting Inventory</RightButton>
-      </ButtonGroup>
-      <DownArrow src="/images/down-arrow.svg" alt="" />
+      <Buttons>
+        <ButtonGroup>
+          <LeftButton>Custom Order</LeftButton>
+          <RightButton>Exiting Inventory</RightButton>
+        </ButtonGroup>
+        <DownArrow src="/images/down-arrow.svg" alt="" />
+      </Buttons>
     </Wrap>
   );
 }
@@ -58,3 +60,5 @@ const DownArrow = styled.img`
   margin-top: 20px;
   height: 40px;
 `;
+
+const Buttons = styled.div``

@@ -23,8 +23,10 @@ function Header() {
           ))}
       </Menu>
       <RightMenu>
-        <a href="#">Shop</a>
-        <a href="#">Tesla Account</a>
+        <DivWrapper>
+          <a href="#">Shop</a>
+          <a href="#">Tesla Account</a>
+        </DivWrapper>
         <IconButton>
           <CustomMenu onClick={() => setBurgerStatus(true)} />
         </IconButton>
@@ -95,11 +97,6 @@ const Menu = styled.div`
 const RightMenu = styled.div`
   display: flex;
   align-items: center;
-  a {
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-right: 10px;
-  }
 `;
 const CustomMenu = styled(MenuIcon)``;
 
@@ -133,4 +130,14 @@ const CustomClose = styled(CloseIcon)``;
 const CloseWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
+`;
+const DivWrapper = styled.div`
+  a {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-right: 10px;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;

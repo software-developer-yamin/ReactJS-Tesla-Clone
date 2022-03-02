@@ -4,7 +4,7 @@ import Section from "./Section";
 const data = [
   {
     id: 0,
-    title: "Model S Yamin",
+    title: "Model S",
     description: "Order Online For Touchless Delivery",
     backgroundImg: "model-s.jpg",
     leftBtnText: "Custom Order",
